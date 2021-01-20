@@ -118,9 +118,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: -moz-linear-gradient(90deg, rgba(156, 132, 44, 0.95) 0%, rgba(243, 129, 129,0.95) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgba(252, 227, 138,0.95) 0%, rgba(243, 129, 129,0.95) 100%);
-    background-image: -ms-linear-gradient(90deg, rgba(252, 227, 138,0.95) 0%, rgba(243, 129, 129,0.95) 100%);
+    background-image: -moz-linear-gradient(90deg, rgba(156, 132, 44, 0.95) 0%, rgba(243, 129, 129, 0.95) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(252, 227, 138, 0.95) 0%, rgba(243, 129, 129, 0.95) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.95) 0%, rgba(243, 129, 129, 0.95) 100%);
     transform: translateY(100%);
     transition: all linear 0.3s;
 }
@@ -137,34 +137,495 @@
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
-.story .card:hover .effect{
+
+.story .card:hover .effect {
     transform: translateY(0%);
 }
+
 /* achievement css goes here */
-.achievement{
-    background: #99cccc;
+.achievement {
+    background: #95e1d3;
     padding: 70px 0 90px;
 }
-.achievement .main{
+
+.achievement .main {
     display: flex;
 }
-.achievement .number{
+
+.achievement .number {
     width: 20%;
     text-align: center;
 }
-.achievement .number h3{
+
+.achievement .number h3 {
     font-size: 72px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
 }
-.achievement .number h6{
+
+.achievement .number h6 {
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     text-transform: uppercase;
 }
-/* achievement css goes here */
-/* achievement css goes here */
-/* achievement css goes here */
-/* header css goes here */
+
+/* services css goes here */
+
+.services {
+    padding-top: 110px;
+}
+
+.services .all_card {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services .all_card .sm_card {
+    width: 370px;
+    display: flex;
+    margin-bottom: 95px;
+}
+
+.services .all_card .sm_card .icon {
+    width: 70px;
+}
+
+.services .all_card .sm_card .icon i {
+    text-align: center;
+    font-size: 25px;
+    color: #95e1d3;
+}
+
+.services .all_card .sm_card .des {}
+
+.services .all_card .sm_card .des h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.services .all_card .sm_card .des p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999999;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+/* review css goes here */
+
+.review {}
+
+.review .all_slider {
+    position: relative;
+}
+
+.review .all_slider .slide {
+    width: 1030px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.review .all_slider .slide .icon {}
+
+.review .all_slider .slide .icon i {
+    font-size: 60px;
+    color: #95e1d3;
+    padding: 40px;
+    border: 3px solid #95e1d3;
+}
+
+.review .all_slider .slide .desc {}
+
+.review .all_slider .slide .desc p {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+.review .all_slider .slider_button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.review .all_slider .slider_button a {
+    color: #999999;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000000;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* team css goes here */
+.team {}
+
+.team .all_members {
+    padding: 95px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team .all_members .member {
+    width: 370px;
+    position: relative;
+}
+
+.team .all_members .member .image {
+    position: relative;
+    height: 470px;
+    overflow: hidden;
+}
+
+.team .all_members .member .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.team .all_members .member .effect {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(90deg, rgba(156, 132, 44, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    border-radius: 100%;
+}
+
+.team .all_members .member:hover .effect {
+    transform: scale(1);
+    border-radius: 0;
+    left: 0;
+}
+
+.team .all_members .member .effect ul {
+    display: flex;
+}
+
+.team .all_members .member .effect ul li {}
+
+.team .all_members .member .effect ul li a i {
+    font-size: 30px;
+    width: 57px;
+    height: 57px;
+    background: #fce38a;
+    text-align: center;
+    line-height: 57px;
+    margin-left: 1px;
+    color: #f38181;
+    transition: 0.5s ease-in-out;
+}
+
+.team .all_members .member .effect ul li a:hover i {
+    background: #f38181;
+    color: #ffffff;
+}
+
+.team .all_members .member .desc {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.team .all_members .member .desc h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team .all_members .member .desc h5 {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* simpleWork css goes here */
+
+.simpleWork {}
+
+.simpleWork .images {
+    display: flex;
+    padding: 100px 0;
+}
+
+.simpleWork .images .fullSize {
+    width: 25%;
+    position: relative;
+}
+
+.simpleWork .images .fullSize img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -4px;
+}
+
+.simpleWork .images .fullSize .sWimage {
+    position: relative;
+    overflow: hidden;
+}
+
+.simpleWork .images .fullSize .sWimage .effect {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.5s ease-in-out;
+    background-image: -moz-linear-gradient(90deg, rgba(156, 132, 44, 0.85) 0%, rgba(243, 129, 129, 0.85) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(252, 227, 138, 0.85) 0%, rgba(243, 129, 129, 0.85) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.85) 0%, rgba(243, 129, 129, 0.85) 100%);
+}
+
+.simpleWork .images .fullSize .sWimage .effect i {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.simpleWork .images .fullSize .sWimage .effect h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+
+.simpleWork .images .fullSize .sWimage .effect h4 {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.simpleWork .images .fullSize .sWimage:hover .effect {
+    top: 0;
+    border-radius: 0;
+}
+
+/* footer css goes here */
+
+footer {
+    background: #f8f8f8;
+    padding: 70px 0 40px;
+}
+.footer{
+    display: flex;
+}
+footer .col-1 {
+    width: 470px;
+    padding-right: 30px;
+}
+
+footer .col-1 .logo {
+    margin-bottom: 35px;
+}
+
+footer .col-1 p {
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+footer .col-1 a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+footer .col-1 a span {
+    font-weight: 700;
+    font-size: 18px;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+}
+
+footer .col-1 .links {
+    margin-top: 15px;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #999999;
+    margin-bottom: 22px;
+}
+
+footer .col-1 .links ul {
+    display: flex;
+    margin-left: 13px;
+}
+
+footer .col-1 .links ul li {}
+
+footer .col-1 .links ul li a {
+    padding: 0 7.5px;
+    color: #95e1d3;
+}
+
+footer .col-1 form {}
+
+footer .col-1 form input {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    padding: 9px 13px;
+    border: 1px solid #cccccc;
+    width: 231px;
+    border-right: 0;
+}
+
+footer .col-1 form input:focus {
+    border: 1px solid #585858;
+    outline: none;
+    border-right: 0;
+    background: #ffffff;
+}
+
+footer .col-1 form input::placeholder {
+    color: #cccccc;
+}
+
+footer .col-1 form button {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+    background: #95e1d3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 8.9px 34px;
+    margin-left: -4px;
+}
+
+footer .col-2 {
+    width: 370px;
+}
+
+footer .col-2 .all_blogs {
+}
+
+footer .col-2 .all_blogs .blog {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer .col-2 .all_blogs .blog .b_image {
+    width: 159px;
+    height: 80px;
+}
+
+footer .col-2 .all_blogs .blog .b_image img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -4px;
+}
+
+footer .col-2 .all_blogs .blog .desc {
+    padding-left: 20px;
+}
+
+footer .col-2 .all_blogs .blog .desc p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom: 1px;
+}
+
+footer .col-2 .all_blogs .blog .desc span {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: #999999;
+}
+footer .col-3 .insta_img{
+    width: 270px;
+}
+footer .col-3 .insta_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col-3 .insta_img img{
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+footer .col-3  a{
+    font-size: 13px;
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+footer .title{
+    margin-bottom: 40px;
+   
+}
+footer .title h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+/* coyright css goes here */
+
+.coyright{
+    text-align: center;
+    background: #f8f8f8;
+}
+.coyright p{
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px;
+}.coyright p span{
+    color: #f38181;
+}
