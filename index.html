@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mogo</title>
 
+    <link rel="shortcut icon" href="images/ficon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,17 @@
 
 <body>
 
+    <div class="overlay-loader">
+        <div class="loader">
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+            <div class="load"></div>
+        </div>
+    </div>
 
     <header id="header">
         <div class="container">
@@ -22,17 +34,17 @@
                         <img src="images/logo.png" alt="logo">
                     </a>
                 </div>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">service</a></li>
-                    <li><a href="#">work</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact</a></li>
+                <ul class="menu">
+                    <li><a href="#what_we_do">About</a></li>
+                    <li><a href="#services">service</a></li>
+                    <li><a href="#work">work</a></li>
+                    <li><a href="#footer">blog</a></li>
+                    <li><a href="#footer" class="mr-0">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    <div id="progress"></div>
     <!-- hero section goes here -->
 
     <section class="banner_area">
@@ -51,7 +63,7 @@
 
     <!-- what we do section goes here -->
 
-    <section class="what_we_do">
+    <section class="what_we_do" id="what_we_do">
         <div class="container">
             <div class="section_title">
                 <h4>What we do</h4>
@@ -121,7 +133,7 @@
     <!-- Services section goes here -->
 
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="section_title">
                 <h4>We work with</h4>
@@ -226,6 +238,10 @@
                             “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
                         </p>
+                        <div class="sign">
+                            <span class="line"></span>
+                            <h6>Jon Doe</h6>
+                        </div>
                     </div>
                 </div>
                 <div class="slider_button">
@@ -323,7 +339,7 @@
 
     <!-- work section goes here -->
 
-    <section class="simpleWork">
+    <section class="simpleWork" id="work">
         <div class="section_title">
             <h4>What we do</h4>
             <h3>some of our work</h3>
@@ -404,7 +420,7 @@
 
     <!-- footer section goes here -->
 
-    <footer>
+    <footer id="footer">
         <div class="container footer">
             <div class="col-1">
                 <div class="logo">
@@ -507,18 +523,18 @@
             </div>
             <div class="col-3">
                 <div class="title">
-                    <h3>blogs</h3>
+                    <h3>instagram</h3>
                 </div>
                 <div class="insta_img">
-                    <img src="images/inst-1.png" alt="instagram image" >
-                    <img src="images/inst-2.png" alt="instagram image" >
-                    <img src="images/inst-3.png" alt="instagram image" >
-                    <img src="images/inst-4.png" alt="instagram image" >
-                    <img src="images/inst-5.png" alt="instagram image" >
-                    <img src="images/inst-6.png" alt="instagram image" >
-                    <img src="images/inst-7.png" alt="instagram image" >
-                    <img src="images/inst-8.png" alt="instagram image" >
-                    <img src="images/inst-9.png" alt="instagram image" >
+                    <img src="images/inst-1.png" alt="instagram image">
+                    <img src="images/inst-2.png" alt="instagram image">
+                    <img src="images/inst-3.png" alt="instagram image">
+                    <img src="images/inst-4.png" alt="instagram image">
+                    <img src="images/inst-5.png" alt="instagram image">
+                    <img src="images/inst-6.png" alt="instagram image">
+                    <img src="images/inst-7.png" alt="instagram image">
+                    <img src="images/inst-8.png" alt="instagram image">
+                    <img src="images/inst-9.png" alt="instagram image">
                 </div>
                 <a href="#">View more photos</a>
             </div>
@@ -537,6 +553,13 @@
         </div>
     </section>
 
+    <a href="#" id="back_to_top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

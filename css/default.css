@@ -19,6 +19,7 @@ ul {
 
 /* common css goes here */
 
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -29,6 +30,9 @@ ul {
     height: 3px;
     background-color: #ffffff;
     margin: 0 auto;
+}
+.mr-0{
+    margin-right: 0 !important;
 }
 
 /* common css goes here */

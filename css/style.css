@@ -1,4 +1,29 @@
+/* preloader */
+.overlay-loader{position:fixed;width:100%;height:100%;top:0;left:0;background:#fff;z-index:99999999}.loader{position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;width:288px;height:288px;animation-name:rotateAnim;-o-animation-name:rotateAnim;-ms-animation-name:rotateAnim;-webkit-animation-name:rotateAnim;-moz-animation-name:rotateAnim;animation-duration:.35s;-o-animation-duration:.35s;-ms-animation-duration:.35s;-webkit-animation-duration:.35s;-moz-animation-duration:.35s;animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;animation-timing-function:linear;-o-animation-timing-function:linear;-ms-animation-timing-function:linear;-webkit-animation-timing-function:linear;-moz-animation-timing-function:linear}.loader .load{width:23px;height:23px;border-radius:50%;border:3px solid #000;position:absolute;top:6px;left:0;right:0;bottom:0;margin:auto}.loader .load:nth-child(odd){border-top:none;border-left:none}.loader .load:nth-child(even){border-bottom:none;border-right:none}.loader .load:nth-child(2){border-width:6px;left:0;top:-12px;width:35px;height:35px}.loader .load:nth-child(3){border-width:6px;left:-3px;top:9px;width:52px;height:52px}.loader .load:nth-child(4){border-width:9px;left:-3px;top:-12px;width:69px;height:69px}.loader .load:nth-child(5){border-width:9px;left:-3px;top:12px;width:92px;height:92px}.loader .load:nth-child(6){border-width:12px;left:0;top:-12px;width:115px;height:115px}.loader .load:nth-child(7){border-width:12px;left:0;top:17px;width:144px;height:144px}@keyframes rotateAnim{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}@-o-keyframes rotateAnim{from{-o-transform:rotate(360deg)}to{-o-transform:rotate(0deg)}}@-ms-keyframes rotateAnim{from{-ms-transform:rotate(360deg)}to{-ms-transform:rotate(0deg)}}@-webkit-keyframes rotateAnim{from{-webkit-transform:rotate(360deg)}to{-webkit-transform:rotate(0deg)}}@-moz-keyframes rotateAnim{from{-moz-transform:rotate(360deg)}to{-moz-transform:rotate(0deg)}}
+
+#progress{border-radius: 0px 0px 10px 0px; height:10px; background:#000;position:fixed;top:86px;left:0;z-index:9999999;animation:scrollPro 4s linear infinite}@keyframes scrollPro{0%{background:#FF8066}10%{background:#00C9A7}20%{background:#2E126D}30%{background:#FF6F91}40%{background:#af9bf7}50%{background:#cc0eb3}60%{background:#c91111}70%{background: #00C9A7}80%{background:#C34A36}90%{background:#af9bf7}100%{background:#d35400}}
+
+/* back to top */
+
+#back_to_top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #000;
+    border-radius: 20%;
+    display: none;
+}
+
+#back_to_top i {
+    line-height: 40px;
+    color: #ffffff;
+}
+
 /* header css goes here */
+
 
 #header {
     font-family: 'Montserrat', sans-serif;
@@ -8,10 +33,36 @@
     width: 100%;
 }
 
+.stickyMenu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100% !important;
+    z-index: 999999;
+    background: #000;
+    padding: 10px 0;
+    animation: bg 1s;
+    transition: 0.5s ease-in-out;
+}
+
+@keyframes bg {
+    from {
+        left: 100%;
+        border-radius: 100%;
+    }
+
+    to {
+        left: 0;
+        border-radius: 0;
+    }
+}
+
 #header nav {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 #header nav .logo {
     margin-top: 28px;
@@ -43,9 +94,14 @@
 /* banner area css goes here */
 
 .banner_area {
+    background: #eb01a5;
     background-image: url(../images/bg-image.png);
+    background-image: -moz-linear-gradient(90deg, rgba(156, 132, 44, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../images/bg-image.png);
+    background-image: -webkit-linear-gradient(90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../images/bg-image.png);
+    background-image: -ms-linear-gradient(90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url(../images/bg-image.png);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .banner_area .text_area {
@@ -90,10 +146,15 @@
 }
 
 /* what_we_do css goes here */
+.what_we_do {
+    padding-top: 80px;
+}
+
 .story {
     display: flex;
     justify-content: space-between;
     padding: 100px 0 114px;
+
 }
 
 .story .card {
@@ -220,7 +281,10 @@
 
 /* review css goes here */
 
-.review {}
+.review {
+    background: #f8f8f8;
+    padding: 70px 0;
+}
 
 .review .all_slider {
     position: relative;
@@ -241,15 +305,36 @@
     border: 3px solid #95e1d3;
 }
 
-.review .all_slider .slide .desc {}
+.review .all_slider .slide .desc {
+    padding-left: 60px;
+}
 
 .review .all_slider .slide .desc p {
     font-size: 24px;
     line-height: 36px;
-    font-weight: 400;
+    font-weight: 300;
     color: #999999;
     font-family: 'Roboto', sans-serif;
     font-style: italic;
+}
+
+.review .all_slider .slide .desc .sign {
+    display: flex;
+    margin-top: 8px;
+}
+
+.review .all_slider .slide .desc .sign .line {
+    height: 3px;
+    width: 60px;
+    background: #f38181;
+    margin-top: 19px;
+}
+
+.review .all_slider .slide .desc .sign h6 {
+    font-size: 24px;
+    color: #333333;
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 10px;
 }
 
 .review .all_slider .slider_button {
@@ -259,6 +344,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    transform: translateY(-50%);
 }
 
 .review .all_slider .slider_button a {
@@ -267,16 +353,24 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #000000;
     text-align: center;
     line-height: 50px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.review .all_slider .slider_button a:hover {
+    color: #dbcf22;
+    background: #000000d0;
 }
 
 /* team css goes here */
-.team {}
+.team {
+    padding-top: 92px;
+}
 
 .team .all_members {
-    padding: 95px 0;
+    padding: 95px 0 0;
     display: flex;
     justify-content: space-between;
 }
@@ -366,7 +460,9 @@
 
 /* simpleWork css goes here */
 
-.simpleWork {}
+.simpleWork {
+    padding-top: 95px;
+}
 
 .simpleWork .images {
     display: flex;
@@ -440,9 +536,11 @@ footer {
     background: #f8f8f8;
     padding: 70px 0 40px;
 }
-.footer{
+
+.footer {
     display: flex;
 }
+
 footer .col-1 {
     width: 470px;
     padding-right: 30px;
@@ -473,6 +571,7 @@ footer .col-1 a span {
     font-weight: 700;
     font-size: 18px;
 }
+
 .line {
     width: 100%;
     height: 1px;
@@ -541,8 +640,7 @@ footer .col-2 {
     width: 370px;
 }
 
-footer .col-2 .all_blogs {
-}
+footer .col-2 .all_blogs {}
 
 footer .col-2 .all_blogs .blog {
     display: flex;
@@ -582,50 +680,60 @@ footer .col-2 .all_blogs .blog .desc span {
     font-size: 13px;
     color: #999999;
 }
-footer .col-3 .insta_img{
+
+footer .col-3 .insta_img {
     width: 270px;
 }
-footer .col-3 .insta_img{
+
+footer .col-3 .insta_img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-footer .col-3 .insta_img img{
+
+footer .col-3 .insta_img img {
     width: 88px;
     height: 88px;
     overflow: hidden;
     margin-bottom: 3px;
 }
-footer .col-3  a{
+
+footer .col-3 a {
     font-size: 13px;
     color: #333333;
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-weight: 300;
 }
-footer .title{
+
+footer .title {
     margin-bottom: 40px;
-   
+
 }
-footer .title h3{
+
+footer .title h3 {
     font-family: 'Montserrat', sans-serif;
     color: #333333;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 14px;
 }
+
 /* coyright css goes here */
 
-.coyright{
+.coyright {
     text-align: center;
     background: #f8f8f8;
 }
-.coyright p{
+
+.coyright p {
     color: #333333;
     font-size: 14px;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     padding: 25px;
-}.coyright p span{
+}
+
+.coyright p span {
     color: #f38181;
 }
